@@ -163,7 +163,7 @@ var jsonData = {
 	},	
 	"pebble13": {
 		"dropdownSelect": ["Type:", "Retail Store"],
-		"inputName": ["Name:", "Lucky's Garage"],	
+		"inputName": ["Name:", "Lucky's Garage Warehouse"],	
 		"inputAddress": ["Address:", "465 Circle Dr"],	
 		"inputAddress2": ["Address2:", ""],	
 		"inputCity": ["City:", "Sidney"],	
