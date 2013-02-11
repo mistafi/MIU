@@ -2,12 +2,14 @@
 // MIU Project 1 
 // Joshua Wisecup
 // Term 1302 
-		
-
 
 //Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 //alert("Hello, World!");
+
+/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+  if (!pageYOffset) window.scrollTo(0, 1);
+}, 1000);
 
 	//Get ElementById Function
 	function $(x){
@@ -61,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function storeTheData (key) {
 		//if no key, then it's brand new and we need a new key
 		if(!key){
-			var id 				= Math.floor(Math.random()*100000001);
+		var id 				= Math.floor(Math.random()*100000001);
 		}else {
 			//set the id to the existing key so it will not overwrite the data
 			id = key;
@@ -213,6 +215,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	//save key value for reuse
 	editSubmit.addEventListener("click", validate);
 	editSubmit.key = this.key;
+	
+	
+	
 	}
 	
 	function deleteDataItem(){
