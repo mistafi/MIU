@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document 
-MIU Project 1 
+MIU Project 2 
 Joshua Wisecup
 Term 1302 
 */
@@ -127,6 +127,52 @@ text-align: left;
 .itemBrowse li a i {
 float: right;	
 }
+
+/* Jquery Mobile overrides */
+
+.ui-loader-default {
+background: none;
+filter: Alpha(Opacity=18);
+opacity: .18;
+width: 46px;
+height: 46px;
+margin-left: -23px;
+margin-top: -23px;
+}
+
+.ui-loader {
+display: none;
+z-index: 9999999;
+position: fixed;
+top: 50%;
+left: 50%;
+border: 0;
+}
+
+.ui-loader .ui-icon {
+background-color: #000;
+display: block;
+margin: 0;
+width: 44px;
+height: 44px;
+padding: 1px;
+-webkit-border-radius: 36px;
+border-radius: 36px;
+}
+
+.ui-icon-loading {
+background: url(../img/ajax-loader.gif);
+background-size: 46px 46px;
+}
+
+.ui-loader-default h1 {
+font-size: 0;
+width: 0;
+height: 0;
+overflow: hidden;
+}
+
+
 
 @media (max-width: 1010px) and (min-width: 768px) {
 	.span12 {

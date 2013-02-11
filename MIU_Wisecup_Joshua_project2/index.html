@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    	<!-- MIU Project 1 -->
+    	<!-- MIU Project 2 -->
     	<!-- Joshua Wisecup -->
     	<!-- Term 1302 -->
 <html lang="en">
@@ -12,8 +12,8 @@
         <meta name="author" content="Joshua Wisecup">
         <meta name="robots" content="noindex,nofollow">
 
-         <!-- Le styles -->
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.css" />
+         <!-- Le styles 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.css" />-->
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
@@ -34,15 +34,15 @@
 
     <body>
     
-    <div class="homepage">
+    <div class="homepage" data-role="page">
     
 	<div class="outerContainer headerRow">
 		<div class="container">
           <div class="row">
             <div class="span12">
-              <header>
+              <header data-role="header">
                  <h1>
-                    <a class="pebblyLogo" title="Link to Pebbly" href="index.html">
+                    <a class="pebblyLogo" title="Link to Pebbly" href="index.html" data-ajax="false">
                         Pebbly
                     </a>
                 </h1>
@@ -51,7 +51,9 @@
           </div>
 		</div>
 	</div>
-    
+
+	<div data-role="content">	
+
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
@@ -60,7 +62,7 @@
             <div class="carousel-caption">
               <h1>Retrace Your Steps</h1>
               <p class="lead">Save your favorite places now.</p>
-              <a class="btn btn-large btn-primary" href="additem.html">Add a Pebble</a>
+              <a class="btn btn-large btn-primary" href="additem.html" data-ajax="false">Add a Pebble</a>
             </div>
           </div>
         </div>
@@ -70,7 +72,7 @@
             <div class="carousel-caption">
               <h1>Coffee Hideaway</h1>
               <p class="lead">Great cup of joe? Pebble that.</p>
-              <a class="btn btn-large btn-primary" href="additem.html">Add a Pebble</a>
+              <a class="btn btn-large btn-primary" href="additem.html" data-ajax="false">Add a Pebble</a>
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@
             <div class="carousel-caption">
               <h1>Unique Pit Stop</h1>
               <p class="lead">Adventure out. Gotta get back.</p>
-              <a class="btn btn-large btn-primary" href="additem.html">Add a Pebble</a>
+              <a class="btn btn-large btn-primary" href="additem.html" data-ajax="false">Add a Pebble</a>
             </div>
           </div>
         </div>
@@ -98,7 +100,7 @@
                       <span class="navbar-form input-append">
                       <label for="terms" class="hidden">Search Pebbles</label>
                       <input class="input-block-level" type="text" id="terms" name="terms" value="Search Pebbles">
-                      <a class="btn" href="404.html"><i class="icon-search"></i></a>
+                      <a class="btn" href="404.html" data-ajax="false"><i class="icon-search"></i></a>
                       </span>
                       
                       <h2>Browse your Pebbles</h2>
@@ -106,19 +108,19 @@
                       <div class="well itemBrowse">
                         <ul class="unstyled">
                             <li>
-                                <a class="btn btn-large" href="404.html">Restaurant<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="404.html" data-ajax="false">Restaurant<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html">Gas Station<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="404.html" data-ajax="false">Gas Station<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html">Retail Store<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="404.html" data-ajax="false">Retail Store<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html">Browse by City<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="404.html" data-ajax="false">Browse by City<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html">Favorites<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="404.html" data-ajax="false">Favorites<i class="icon-chevron-right"></i></a>
                             </li>
                             
                         </ul>
@@ -130,12 +132,25 @@
 		</div>
     </div>
 
+	</div><!-- /content -->
+    
+    <footer data-role="footer">
+        <div class="outerContainer footerRow">
+            <div class="container">
+                <div class="row">
+                		<h3>Page Footer</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
         <!-- Le javascript
             ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.js"></script>
         <script src="js/bootstrap.js"></script>
-  	</div>
+	</div><!-- /page -->
 	</body>
 </html>

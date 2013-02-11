@@ -1,5 +1,5 @@
 // JSON Document
-// MIU Project 1 
+// MIU Project 2 
 // Joshua Wisecup
 // Term 1302 
 
