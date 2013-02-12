@@ -263,31 +263,63 @@ overflow: hidden;
 	 	padding-top:1em;
 	}
 	.input-prepend input, .input-append input, .input-prepend input[class*="span"], .input-append input[class*="span"] {
-	width: 320px;
+	width: 100%;
 	}
 }
 
 /* Smartphone (landscape) ------------------------ */ 
 @media (min-width: 320px) and (max-width: 550px) {
 /* body { border-left:5px solid orange;} */
+   
+	header h1 {
+		margin: 0px 0;
+		font-size: 29px;
+		font-family: 'Oxygen', sans-serif;
+		font-weight:bold;
+	}
+
+   .headerRow, .homepage .headerRow {
+		height:40px;
+	}
    .carousel {
-		height: 200px;
+		height: 100px;
+		margin-bottom: 0px;
+  	}
+	.carousel-caption h1 {
+	font-size: 24px;
   	}
   	.carousel .container {
 
   	}
       .carousel .item {
-        height: 200px;
+        height: 100px;
       }
       .carousel img {
-        height: 200px;
+        height: 100px;
       }
   	.carousel-caption {
-	width: 70%;
-	padding: 15px 40px;
-	margin: 30px auto;
+		width: 70%;
+		padding: 2px 40px;
+		margin: 2px auto;
+		height: 93px;
   	}
-
+	.carousel-control {
+		margin-top: -20px;
+	}
+	.bodyRow {
+		padding-top: .5em;
+	}
+	.lead {
+		margin-bottom: 0px;
+		font-size:18px;
+	}
+	.searchBar .navbar-form {
+		margin-bottom:0px;	
+	}
+	
+	.itemBrowse h2 {
+		font-size: 20px;	
+	}
 }
 
 /* Desktop and Tablet Landscape ------------------------ */
