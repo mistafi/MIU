@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function(){
 }, 1000);
 
 	//Get ElementById Function
-	function $(x){
+	function ge(x){
 		var elements = document.getElementById("x");
 	return elements;
 	}
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Create select field element and populate with options
 	function makeSelectField() {
 		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
-			selectDiv = $("selectDiv"),
+			selectDiv = ge("selectDiv"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "dropdownSelect");
 		for(var i=0, j=pebbleGroups.length; i<j; i++){
@@ -81,19 +81,22 @@ window.addEventListener("DOMContentLoaded", function(){
 		item.inputZip		= ["Zip Code:", document.getElementById("inputZip").value];
 		item.inputRating	= ["Rating:", document.getElementById("inputRating").value];
 		item.inputDate		= ["Date of Visit:", document.getElementById("inputDate").value];
-		//item.inputHidden	= ["Hidden:", $("inputHidden").value];
+		//item.inputHidden	= ["Hidden:", ge("inputHidden").value];
 		item.inputArea		= ["Notes:", document.getElementById("inputArea").value];
 		item.inputCheck		= ["Favorite:", favoriteValue];
 		
 		//Save data into local storage. Use stringify to convert object into a string		
 		localStorage.setItem(id, JSON.stringify(item));
+		
 		//localStorage.setItem("test","hello");
 		//alert(localStorage.length);
 		alert("Pebble Saved! You have " + localStorage.length + " pebbles saved.");
 	}
 	
+
 	function getStorageData(){
 		toggleTheControls("on");
+			
 		if(localStorage.length === 0) {
 			alert("There is no data in Local Storage so example data was added.");
 			autoFillDefault();
@@ -216,8 +219,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	editSubmit.addEventListener("click", validate);
 	editSubmit.key = this.key;
 	
-	
-	
+	itemsDiv = document.getElementById("items");
+	itemsDiv.parentNode.removeChild(itemsDiv);
 	}
 	
 	function deleteDataItem(){
@@ -319,11 +322,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	
 	//Set Link and Submit Click Events
-	var displayDataLink = $("displayDataLink");
+	var displayDataLink = ge("displayDataLink");
 	document.getElementById("displayDataLink").addEventListener("click", getStorageData);
-	var clearDataLink = $("clearData");
+	var clearDataLink = ge("clearData");
 	document.getElementById("clearData").addEventListener("click", clearLocalStorage);
-	var saveData = $("submit");
+	var saveData = ge("submit");
 	document.getElementById("submit").addEventListener("click", validate);
 	
 
