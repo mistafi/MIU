@@ -12,12 +12,13 @@
         <meta name="author" content="Joshua Wisecup">
         <meta name="robots" content="noindex,nofollow">
 
-         <!-- Le styles 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.css" />-->
+         <!-- Le styles -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
+        <link href="css/bronze.css" rel="stylesheet">
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -97,8 +98,8 @@
                   <p class="searchBar">
                       <span class="navbar-form input-append">
                       <label for="terms" class="hidden">Search Pebbles</label>
-                      <input class="input-block-level" type="text" id="terms" name="terms" value="Search Pebbles">
-                      <a class="btn" href="404.html" data-ajax="false"><i class="icon-search"></i></a>
+                      <input class="input-block-level" type="text" id="terms" name="terms" value="Search Pebbles" onblur="if(this.value=='')this.value='Search'" onfocus="if(this.value=='Search')this.value=''">
+                      <a class="btn" href="#" onclick="searchQuery(); return false;"><i class="icon-search"></i></a>
                       </span>
 					<div class="itemBrowse">
                       <h2>Browse your Pebbles</h2>
@@ -106,13 +107,13 @@
                       <div class="well">
                         <ul class="unstyled">
                             <li>
-                                <a class="btn btn-large" href="404.html" data-ajax="false">Restaurant<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="food.html" data-ajax="false">Restaurant<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html" data-ajax="false">Gas Station<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="gas.html" data-ajax="false">Gas Station<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
-                                <a class="btn btn-large" href="404.html" data-ajax="false">Retail Store<i class="icon-chevron-right"></i></a>
+                                <a class="btn btn-large" href="retail.html" data-ajax="false">Retail Store<i class="icon-chevron-right"></i></a>
                             </li>
                             <li>
                                 <a class="btn btn-large" href="404.html" data-ajax="false">Browse by City<i class="icon-chevron-right"></i></a>
@@ -123,6 +124,17 @@
                             
                         </ul>
                       </div>
+                      <div class="well">
+                      	<div class="ui-grid-b">
+                        <div class="ui-block-a imgBlock"><a href="retail.html" data-ajax="false" data-role="button" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><img class="imgAlign" src="img/Retail Store.png"></span></a></div>
+                        <div class="ui-block-b imgBlock"><a href="gas.html" data-ajax="false" data-role="button" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><img class="imgAlign" src="img/Gas Station.png"></span></a></div>
+                        <div class="ui-block-c imgBlock"><a href="food.html" data-ajax="false" data-role="button" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><img class="imgAlign" src="img/Restaurant.png"></span></a></div>
+                    </div>
+                      
+                      </div>
+                      
+                      
+                      
                      </div>
                  </p>
 
@@ -137,11 +149,24 @@
         <div class="outerContainer footerRow">
             <div class="container">
                 <div class="row">
-                		<h3>Page Footer</h3>
-                </div>
+                     <div class="navbar">
+                      <div class="navbar-inner">
+                        <ul class="nav">
+                          <li class="active"><a href="#">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="additem.html">Form</a></li>
+                          <li><a href="all.html">View All</a></li>
+                        </ul>
+                      </div>
+                    </div>                
+				</div>
             </div>
         </div>
     </footer>
+    
+    
+    
+
 
     
         <!-- Le javascript

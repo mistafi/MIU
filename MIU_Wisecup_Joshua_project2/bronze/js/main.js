@@ -313,6 +313,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 	}
 	
+	//trying to add query function
+	function searchQuery() {
+	 if (document.getElementById("terms").value.length > 0) {
+            getStorageData();
+        }else {
+		return true;
+        }
+    }
+
+	
 	//Variable defaults
 	var pebbleGroups = ["--Choose a Type--", "Restaurant", "Gas Station", "Retail Store"],
 		favoriteValue = "No",
