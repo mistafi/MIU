@@ -17,7 +17,6 @@ Term 1302
 	text-decoration: none;
 }
 .addItem {
-	margin-top: 50px;
 }
 
 .ui-grid {
@@ -35,7 +34,6 @@ text-align:left
 .imgBlock .ui-btn-inner {
 	font-size: 11px;
 	white-space:normal;
-	min-height:100px;
 }
 
 .carousel-caption h1 {
@@ -66,4 +64,19 @@ text-align:left
 }
 .itemButton {
 	margin: -9px 0 0 -9px;	
+}
+
+.ui-field-contain .ui-btn.ui-submit {
+margin: 0 5px;
+}
+
+.example {
+	display: block;
+	margin: 10px 0 0 10px;
+	font-size: 14px;	
+}
+label.error {
+	display:block;
+	margin:10px 0;
+	color:#cc0000;	
 }
