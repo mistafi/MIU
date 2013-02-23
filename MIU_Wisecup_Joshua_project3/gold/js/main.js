@@ -16,7 +16,22 @@ $('#newItem').live('pagebeforeshow', function(){
 	return elements;
 	}
 	
-	
+	$.fn.clearForm = function() {
+	  return this.each(function() {
+	    var type = this.type, tag = this.tagName.toLowerCase();
+	    if (tag == 'form')
+	      return $(':input',this).clearForm();
+	    if (type == 'text' || type == 'password' || tag == 'textarea')
+	      this.value = '';
+	    else if (type == 'checkbox' || type == 'radio')
+	      this.checked = false;
+	    else if (tag == 'select')
+	      this.selectedIndex = -1;
+	  });
+	};
+	//reset the form
+	$('#reset').clearForm();
+
 	//Create select field element and populate with options
 	function makeSelectField() {
 		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
@@ -83,6 +98,8 @@ $('#newItem').live('pagebeforeshow', function(){
 			makeNavLinksLi(localStorage.key(i), navLinksLi); // create edit and delete links for each item in local storage
 		}
 		document.getElementById("mainFormContainer").appendChild(makeNewDiv);
+		selectDiv = document.getElementById("selectDiv");
+		selectDiv.parentNode.removeChild("select");
 	};	
 	
 	
@@ -333,7 +350,6 @@ $('#newItem').live('pagebeforeshow', function(){
 	;
 	
 		makeSelectField();
-
 
 		var pebbleForm = $('#pebbleForm');
 		    pebbleForm.validate({
