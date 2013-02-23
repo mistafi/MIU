@@ -101,3 +101,9 @@ label.error {
 		background-image: url("app-icon-email-highres.png");
 		background-size: 18px 18px;
 }
+.mainListImg {
+	margin:10px;	
+}
+.mainListHeader {
+	margin-top:20px;	
+}
