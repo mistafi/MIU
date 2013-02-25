@@ -1,5 +1,5 @@
 // JavaScript Document
-// MIU Project 3 Gold 
+// MIU Project 4 Gold 
 // Joshua Wisecup
 // Term 1302 
 

@@ -1,5 +1,5 @@
 // JavaScript Document
-// MIU Project 3 
+// MIU Project 4 
 // Joshua Wisecup
 // Term 1302 
 
