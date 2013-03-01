@@ -10,6 +10,16 @@ $('#home').live('pagebeforeshow', function(){
 		
 $('#newItem').live('pagebeforeshow', function(){
 
+
+    $('select').selectmenu('refresh');
+	
+	function showSubmit(){
+	document.getElementById("submit").parentNode.style.display = "block";
+	document.getElementById("submit2").parentNode.style.display = "none";
+	}
+	
+	showSubmit();
+
 	//Get ElementById Function
 	function ge(x){
 		var elements = document.getElementById("x");
@@ -32,23 +42,23 @@ $('#newItem').live('pagebeforeshow', function(){
 	//reset the form
 	$('#reset').clearForm();
 
-	//Create select field element and populate with options
-	function makeSelectField() {
-		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
-			selectDiv = ge("selectDiv"),
-			makeSelect = document.createElement("select");
-			makeSelect.setAttribute("id", "dropdownSelect");
-			makeSelect.setAttribute("data-native-menu", "false");
-			makeSelect.setAttribute("data-theme", "c");
-		for(var i=0, j=pebbleGroups.length; i<j; i++){
-			var makeOption = document.createElement("option");
-			var optText = pebbleGroups[i];
-			makeOption.setAttribute("value", optText);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
-		}
-		document.getElementById("selectDiv").appendChild(makeSelect);
-	}
+//	//Create select field element and populate with options
+//	function makeSelectField() {
+//		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
+//			selectDiv = ge("selectDiv"),
+//			makeSelect = document.createElement("select");
+//			makeSelect.setAttribute("id", "dropdownSelect");
+//			makeSelect.setAttribute("data-native-menu", "false");
+//			makeSelect.setAttribute("data-theme", "c");
+//		for(var i=0, j=pebbleGroups.length; i<j; i++){
+//			var makeOption = document.createElement("option");
+//			var optText = pebbleGroups[i];
+//			makeOption.setAttribute("value", optText);
+//			makeOption.innerHTML = optText;
+//			makeSelect.appendChild(makeOption);
+//		}
+//		document.getElementById("selectDiv").appendChild(makeSelect);
+//	}
 	
 		//Auto Fill Local Storage as default
 	var autoFillDefault = function (){
@@ -97,9 +107,9 @@ $('#newItem').live('pagebeforeshow', function(){
 			}
 			makeNavLinksLi(localStorage.key(i), navLinksLi); // create edit and delete links for each item in local storage
 		}
-		document.getElementById("mainFormContainer").appendChild(makeNewDiv);
-		selectDiv = document.getElementById("selectDiv");
-		selectDiv.parentNode.removeChild("select");
+		document.getElementById("editItemPage").appendChild(makeNewDiv);
+//		selectDiv = document.getElementById("selectDiv");
+//		selectDiv.parentNode.removeChild("select");
 	};	
 	
 	
@@ -118,7 +128,7 @@ $('#newItem').live('pagebeforeshow', function(){
 	function makeNavLinksLi(key, navLinksLi){
 		//add edit single item link
 		var editDataLink = document.createElement("a");
-		editDataLink.href = "#";
+		editDataLink.href = "#newItem";
 		editDataLink.setAttribute("class", "btn btn-info");
 		editDataLink.key = key;
 		var editDataText = "Edit Pebble";
@@ -133,7 +143,7 @@ $('#newItem').live('pagebeforeshow', function(){
 		
 		//add delete single item link
 		var deleteDataLink = document.createElement("a");
-		deleteDataLink.href = "#";
+		deleteDataLink.href = "#editItemPage";
 		deleteDataLink.setAttribute("class", "btn btn-danger");
 		deleteDataLink.key = key;
 		var deleteDataText = "Delete Pebble";
@@ -147,6 +157,9 @@ $('#newItem').live('pagebeforeshow', function(){
 	//Grab data from local storage
 	var value = localStorage.getItem(this.key);
 	var item = JSON.parse(value);
+	
+	document.getElementById("submit").parentNode.style.display = "none";
+	document.getElementById("submit2").parentNode.style.display = "block";
 	
 	//Show the form
 //	toggleTheControls("off");
@@ -169,9 +182,10 @@ $('#newItem').live('pagebeforeshow', function(){
 	//Remove inital listener from save button
 	submit.removeEventListener("click", storeTheData);
 	
+		
 	//change submit button to edit button
-	document.getElementById("submit").value = "Edit Pebble";
-	var editSubmit = document.getElementById("submit");
+//	document.getElementById("submit").value = "Edit Pebble";
+	var editSubmit = document.getElementById("submit2");
 	
 	//save key value for reuse
 	editSubmit.addEventListener("click", validate);
@@ -349,7 +363,7 @@ $('#newItem').live('pagebeforeshow', function(){
 		errMessage = document.getElementById("errorMessages");
 	;
 	
-		makeSelectField();
+//		makeSelectField();
 
 		var pebbleForm = $('#pebbleForm');
 		    pebbleForm.validate({
