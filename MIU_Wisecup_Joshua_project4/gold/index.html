@@ -24,6 +24,7 @@
         <!--<link href="css/bootstrap.css" rel="stylesheet">
        	<link href="css/bootstrap-responsive.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet"> -->
+        <link href="css/pebbly.css" rel="stylesheet">
         <link href="css/gold.css" rel="stylesheet">
 
         <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -55,9 +56,9 @@
 
 <!-- Start of home page -->
 
-	<div data-role="page" id="home" data-url="home" data-theme="b" class="homepage">
+	<div data-role="page" id="home" data-url="home" data-theme="a" class="homepage">
 
-		<div class="header" data-role="header" data-position="fixed" data-theme="b">
+		<div class="header" data-role="header" data-position="fixed" data-theme="a">
         	<h1>Pebbly</h1>
         </div><!-- /header -->
         
@@ -68,7 +69,7 @@
                   <img src="img/pebble_sm.jpg" alt="">
                     <div class="carousel-caption">
                       <h1>Retrace Your Steps</h1>
-                      <a class="itemButton" href="#newItem" data-role="button" data-theme="c" data-inline="true">Add a Pebble</a>
+                      <a class="itemButton" href="#newItem" data-role="button" data-theme="a" data-inline="true">Add a Pebble</a>
                     </div>
                 </div>    		
             </div><!-- /ui-grid -->
@@ -77,7 +78,7 @@
             
               <p class="lead">Save your faves. Get back again.</p>
                     
-                 <ul data-role="listview" data-inset="true" data-filter="true" data-theme="c">
+                 <ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search your pebbles..." data-theme="a">
         
                     <li class="ui-screen-hidden">Bella's
                         <ul data-role="listview" data-inset="true">
@@ -327,11 +328,11 @@
                 <div class="itemBrowse">
                   <h2>Browse your Pebbles</h2>
     
-                    <ul data-role="listview" data-inset="true">
+                    <ul data-role="listview" data-inset="true" data-theme="a">
                         <li>
                         	<img src="img/Restaurant.png" class="mainListImg">
                             <h3 class="mainListHeader">Restaurant</h3>
-                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">
+                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
                                 <li>Bella's
                                 	<ul data-role="listview" data-inset="true">
                                     	<li>
@@ -421,7 +422,7 @@
                         <li>
                           <img src="img/Gas%20Station.png" class="mainListImg">
                             <h3 class="mainListHeader">Gas Station</h3>
-                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">
+                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
                                 <li>Family Guys
                                 	<ul data-role="listview" data-inset="true">
                                     	<li>
@@ -499,7 +500,7 @@
                         <li>
                           <img src="img/Retail%20Store.png" class="mainListImg">                        
                             <h3 class="mainListHeader">Retail Store</h3>
-                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">
+                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
                                 <li>Dress Place
                                 	<ul data-role="listview" data-inset="true">
                                     	<li>
@@ -589,7 +590,7 @@
                         <li>
                           <img src="img/city.png" class="mainListImg">                        
                             <h3 class="mainListHeader">Browse by City</h3>
-                             <ul data-role="listview" data-inset="true" data-filter="true">
+                             <ul data-role="listview" data-inset="true" data-filter="true" data-theme="a">
                              	<li data-role="list-divider">Kentucky
                                 <li>Frankfort
                                 	 <ul data-role="listview" data-inset="true" data-filter="true">
@@ -854,7 +855,7 @@
                         <li>
                           <img src="img/star.png" class="mainListImg">                        
                             <h3 class="mainListHeader">Favorites</h3>
-                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">
+                             <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
                                 <li>Dress Place
                                 	<ul data-role="listview" data-inset="true">
                                     	<li>
@@ -982,15 +983,15 @@
                  </div>
                     
                     <div class="ui-grid-b">
-                        <div class="ui-block-a imgBlock"><a href="#retail" data-role="button" data-theme="c"><img class="imgAlign" src="img/Retail Store.png"><br/>Retail</a></div>
-                        <div class="ui-block-b imgBlock"><a href="#gas" data-role="button" data-theme="c"><img class="imgAlign" src="img/Gas Station.png"><br/>Gas</a></div>
-                        <div class="ui-block-c imgBlock"><a href="#food" data-role="button" data-theme="c"><img class="imgAlign" src="img/Restaurant.png"><br/>Food</a></div>
+                        <div class="ui-block-a imgBlock"><a href="#retail" data-role="button" data-theme="a"><img class="imgAlign" src="img/Retail Store.png"><br/>Retail</a></div>
+                        <div class="ui-block-b imgBlock"><a href="#gas" data-role="button" data-theme="a"><img class="imgAlign" src="img/Gas Station.png"><br/>Gas</a></div>
+                        <div class="ui-block-c imgBlock"><a href="#food" data-role="button" data-theme="a"><img class="imgAlign" src="img/Restaurant.png"><br/>Food</a></div>
                     </div><!-- /grid-b -->
 
 
 	</div><!-- /content -->
     
-    	<div data-position="fixed" data-role="navbar" data-id="footer"><!-- /footer -->
+    	<div data-position="fixed" data-role="navbar" data-id="footer" data-theme="a"><!-- /footer -->
         	<ul>
 				<li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home">Home</a></li>
                 <li><a href="#about" data-icon="info">About</a></li>
@@ -1002,9 +1003,9 @@
         
 <!-- About page -->
 
-    <div data-role="page" id="about" data-url="about" data-theme="b" class="about">
+    <div data-role="page" id="about" data-url="about" data-theme="a" class="about">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
@@ -1012,9 +1013,9 @@
             <p>
             Pebbly is an app that lets you save your favorite places so you can retrace your steps.
             </p>
-            <div data-theme="b">
+            <div data-theme="a">
                 <h2>About</h2>
-                    <ul data-role="listview" data-inset="true" data-theme="c">
+                    <ul data-role="listview" data-inset="true" data-theme="a">
                         <li><a href="https://github.com/mistafi/MIU/tree/MIU-Working-Copy">Main Git</a></li>
                         <li><a href="https://github.com/mistafi/MIU/tree/MIU-Working-Copy/MIU_Wisecup_Joshua_project2">Project Git</a></li>
                         <li><a href="https://github.com/mistafi/MIU/tree/MIU-Working-Copy/MIU_Wisecup_Joshua_project2/gold">Gold Project</a></li>
@@ -1037,9 +1038,9 @@
 <!-- END About page -->
 
 <!-- Add Item page -->
-    <div data-role="page" id="newItem" data-url="newItem" data-theme="b" class="newItem">
+    <div data-role="page" id="newItem" data-url="newItem" data-theme="a" class="newItem">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
 
@@ -1048,8 +1049,7 @@
                <div data-role="navbar">
                     <ul class="nav nav-pills">
                       <li><a id="clearData" href="#"><i class="icon-remove"></i> Clear Stored Data</a></li>
-                      <li><a id="displayDataLink" href="#"><i class="icon-list"></i> Display Data</a></li>
-                      <li><a id="addPebble" href="#newItem" style="display:none;"> Add New Item</a></li>
+                      <li><a id="displayDataLink" href="#editItemPage"><i class="icon-list"></i> Display Data</a></li>
                     </ul>  
 				</div>  
                  
@@ -1059,14 +1059,14 @@
                  <form action="#" method="post" class="form-horizontal" id="pebbleForm" data-ajax=”false”>
                   <div class="control-group" data-role="fieldcontain">
                     <label id="labelSelect" class="control-label" for="dropdownSelect">Type*</label>
-<!--                    	<select id="dropdownSelect" data-native-menu="false" data-theme="c">
+                    	<select id="dropdownSelect" data-native-menu="false" data-theme="a">
                         	<option value="--Choose a Type--">--Choose a Type--</option>
                         	<option value="Restaurant">Restaurant</option>
                         	<option value="Gas Station">Gas Station</option>
                         	<option value="Retail Store">Retail Store</option>
-                        </select>-->
-                            <div id="selectDiv" class="controls" >
-                    		</div>
+                        </select>
+<!--                            <div id="selectDiv" class="controls">
+                    		</div>-->
                         <span class="example">Please select a Pebble type.</span>
                   </div>
                                        
@@ -1119,12 +1119,13 @@
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                            <legend>Add to Favorites</legend>
-                           <input type="checkbox" name="checkbox-agree" id="addfav" class="custom" value="Yes" data-theme="c"/>
+                           <input type="checkbox" name="checkbox-agree" id="addfav" class="custom" value="Yes" data-theme="a"/>
                            <label class="checkbox" for="addfav">Yes</label>
                         </fieldset>
                     </div>                    
                     
                           	<input type="submit" id="submit" class="btn btn-large btn-block btn-success ui-block-b" value="Add Pebble" data-theme="b">
+                          	<input type="submit" id="submit2" class="btn btn-large btn-block btn-success ui-block-b" value="Edit Pebble" data-theme="b">
                           	<input type="reset" id="reset" class="btn btn-large btn-block btn-info" value="Reset" data-theme="a">
                 </form>
     
@@ -1145,18 +1146,44 @@
     
     
 <!-- END Add Item page -->
+
+
+
+<!-- END Add Item page -->
+
+
+    <div data-role="page" id="editItemPage" data-url="edit" class="editItemPage" data-theme="a" data-add-back-btn="true">
+
+        <div class="header" data-role="header" data-position="fixed" data-theme="a">
+        	<h1>Pebbly</h1>
+        </div>
+        
+        <div data-role="content" id="editFormContainer">
+ 
+        </div>
+
+    	<div data-position="fixed" data-role="navbar" data-id="footer">
+        	<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#about" data-icon="info">About</a></li>
+				<li><a href="#newItem" data-icon="grid">Add New</a></li>
+				<li><a href="#viewAll" data-icon="star">View All</a></li>
+			</ul>
+        </div> 
+        
+    </div>
  
 <!-- All Item page -->
-    <div data-role="page" id="viewAll" data-url="viewAll" data-theme="b" class="viewAll">
+    <div data-role="page" id="viewAll" data-url="viewAll" data-theme="a" class="viewAll">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
         <div data-role="content">
                 <h2>View All</h2>
 
-                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="c">
+                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
         
                     <li>Bella's
                         <ul data-role="listview" data-inset="true">
@@ -1415,16 +1442,16 @@
 <!-- END All Item page -->
 
 <!-- food page -->
-    <div data-role="page" data-url="food" id="food" class="food" data-theme="b">
+    <div data-role="page" data-url="food" id="food" class="food" data-theme="a">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
-        <div data-role="content">
+        <div data-role="content" data-theme="a">
                 <h2>Restaurants</h2>
 
-                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="c">
+                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
             <li>Bella's
                 <ul data-role="listview" data-inset="true">
                     <li>
@@ -1524,16 +1551,16 @@
     </div>
 
 
-    <div data-role="page" id="gas" data-url="gas" class="gas" data-theme="b">
+    <div data-role="page" id="gas" data-url="gas" class="gas" data-theme="a">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
         <div data-role="content">
                 <h2>Gas Stations</h2>
 
-                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="c">
+                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
                     <li>Family Guys
                         <ul data-role="listview" data-inset="true">
                             <li>
@@ -1621,16 +1648,16 @@
     </div>
     
     
-    <div data-role="page" id="retail" data-url="retail" class="retail" data-theme="b">
+    <div data-role="page" id="retail" data-url="retail" class="retail" data-theme="a">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
         <div data-role="content">
                 <h2>Retail Stores</h2>
 
-                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="c">
+                 <ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-theme="a">
 
         <li>Dress Place
             <ul data-role="listview" data-inset="true">
@@ -1732,9 +1759,9 @@
     
     
     
-    <div data-role="page" id="404" data-url="404" class="404" data-theme="b">
+    <div data-role="page" id="404" data-url="404" class="404" data-theme="a">
 
-        <div class="header" data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <div class="header" data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
         	<h1>Pebbly</h1>
         </div>
         
